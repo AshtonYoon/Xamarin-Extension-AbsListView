@@ -19,14 +19,6 @@
 							<Label x:Name="textLabel"
 								   Text="{Binding .}"
 								   FontSize="15" />
-							<Label x:Name="detailLabel"
-								   Text="{Binding .}"
-								   HorizontalOptions="Start"
-								   VerticalOptions="End"
-								   HeightRequest="20"
-								   FontSize="14"
-								   LineBreakMode="TailTruncation"
-								   TranslationX="40" />
 							<Label x:Name="durationLabel"
 								   Text="3:31"
 								   FontSize="Small"
