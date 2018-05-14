@@ -8,6 +8,8 @@ using Android.Graphics;
 using Android.Widget;
 using Xamarin.Forms;
 
+using AColor = Android.Graphics.Color;
+
 [assembly: Xamarin.Forms.ExportRenderer(typeof(ExtensionListView.SwipeMenuListView), typeof(ExtensionListViewRenderer))]
 namespace ExtensionListView.Droid
 {
@@ -32,6 +34,46 @@ namespace ExtensionListView.Droid
                 "Android Example",
                 "List View Source Code",
                 "List View Array Adapter",
+                "Android Example List View",
+                "Android List View",
+                "Adapter implementation",
+                "Simple List View In Android",
+                "Create List View Android",
+                "Android Example",
+                "List View Source Code",
+                "List View Array Adapter",
+                "Android Example List View",
+                "Android List View",
+                "Adapter implementation",
+                "Simple List View In Android",
+                "Create List View Android",
+                "Android Example",
+                "List View Source Code",
+                "List View Array Adapter",
+                "Android Example List View",
+                "Android List View",
+                "Adapter implementation",
+                "Simple List View In Android",
+                "Create List View Android",
+                "Android Example",
+                "List View Source Code",
+                "List View Array Adapter",
+                "Android Example List View",
+                "Android List View",
+                "Adapter implementation",
+                "Simple List View In Android",
+                "Create List View Android",
+                "Android Example",
+                "List View Source Code",
+                "List View Array Adapter",
+                "Android Example List View",
+                "Android List View",
+                "Adapter implementation",
+                "Simple List View In Android",
+                "Create List View Android",
+                "Android Example",
+                "List View Source Code",
+                "List View Array Adapter",
                 "Android Example List View"
             };
 
@@ -44,8 +86,9 @@ namespace ExtensionListView.Droid
                     new A.SwipeMenuItem(Context)
                     {
                         Width = 200,
-                        Background = new ColorDrawable(Resources.GetColor(Resource.Color.abc_hint_foreground_material_dark)),
-                        IconRes = menu.GetViewType() == 0 ? Resource.Drawable.ic_mr_button_connected_00_light : Resource.Drawable.ic_mr_button_connected_10_light
+                        Background = new ColorDrawable(AColor.Red),
+                        Title = "Delete",
+                        TitleSize = 14
                     }
                 };
             });

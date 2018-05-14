@@ -9,7 +9,7 @@ namespace Wahid.SwipemenuListview
 {
     public abstract class BaseSwipListAdapter : BaseAdapter
     {
-        public bool getSwipEnableByPosition(int position)
+        public bool GetSwipEnableByPosition(int position)
         {
             return true;
         }

@@ -5,15 +5,12 @@
 			 xmlns:local="clr-namespace:ExtensionListView"
 			 x:Class="ExtensionListView.MainPage">
 	<ContentPage.Content>
-		<local:SwipeMenuListView x:Name="listView" 
+		<local:SwipeMenuListView x:Name="listView"
 								 HorizontalOptions="Fill"
 								 VerticalOptions="Fill">
-			<local:SwipeMenuListView.Header>
-				<StackLayout>
-					<Label Text="Header"
-						   TextColor="Black"/>
-				</StackLayout>
-			</local:SwipeMenuListView.Header>
+			<x:Arguments>
+				<ListViewCachingStrategy>RecycleElement</ListViewCachingStrategy>
+			</x:Arguments>
 		</local:SwipeMenuListView>
 	</ContentPage.Content>
 </ContentPage>

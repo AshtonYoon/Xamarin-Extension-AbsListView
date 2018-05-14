@@ -74,7 +74,6 @@ namespace Wahid.SwipemenuListview
             };
             boss.AddView(view);
             boss.AddView(parent);
-           
         }
 
         private ImageView CreateIcon(SwipeMenuItem item)
@@ -86,13 +85,16 @@ namespace Wahid.SwipemenuListview
 
         private TextView CreateTitle(SwipeMenuItem item)
         {
-            return new TextView(Context)
+            var textView = new TextView(Context)
             {
                 Text = (item.Title),
-                Gravity = Android.Views.GravityFlags.Center,
+                Gravity = GravityFlags.Center,
                 TextSize = item.TitleSize,
-                //tv.SetTextColor(item.TitleColor);
             };
+
+            textView.SetTextColor(Color.White);
+
+            return textView;
         }       
         public void OnClick(View v)
         {
