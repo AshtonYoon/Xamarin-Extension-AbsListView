@@ -15,6 +15,8 @@ using Xamarin.Forms;
 using System.Threading.Tasks;
 using Android.Graphics;
 using Xamarin.Forms.Platform.Android;
+using Android.Content.Res;
+using Android.Graphics.Drawables;
 
 namespace ExtensionListView.Droid
 {
@@ -48,6 +50,23 @@ namespace ExtensionListView.Droid
             if (convertView == null)
             {
                 convertView = inflater.Inflate(layout, parent, false);
+            }
+            
+            if (position % 2 == 1)
+            {
+                int[] attrs = new int[] { Android.Resource.Attribute.SelectableItemBackground };
+                TypedArray typedArray = Forms.Context.ObtainStyledAttributes(attrs);
+                int backgroundResource = typedArray.GetResourceId(0, 0);
+                convertView.SetBackgroundResource(backgroundResource);
+                typedArray.Recycle();
+            }
+            else
+            {
+                int[] attrs = new int[] { Android.Resource.Attribute.SelectableItemBackgroundBorderless };
+                TypedArray typedArray = Forms.Context.ObtainStyledAttributes(attrs);
+                int backgroundResource = typedArray.GetResourceId(0, 0);
+                convertView.SetBackgroundResource(backgroundResource);
+                typedArray.Recycle();
             }
 
             Item item = data[position];

@@ -20,6 +20,7 @@ namespace Wahid.SwipemenuListview
         {
             mItems.Add(item);
         }
+
         public void AddMenuItems(List<SwipeMenuItem> items)
         {
             mItems.AddRange(items);
