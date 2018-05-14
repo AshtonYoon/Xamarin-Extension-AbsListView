@@ -2928,6 +2928,9 @@ namespace ExtensionListView.Droid
 			// aapt resource value: 0x7f08007a
 			public const int design_navigation_view = 2131230842;
 			
+			// aapt resource value: 0x7f0800b2
+			public const int detail = 2131230898;
+			
 			// aapt resource value: 0x7f080010
 			public const int disableHome = 2131230736;
 			
@@ -2985,6 +2988,9 @@ namespace ExtensionListView.Droid
 			// aapt resource value: 0x7f080044
 			public const int image = 2131230788;
 			
+			// aapt resource value: 0x7f0800b1
+			public const int imageview = 2131230897;
+			
 			// aapt resource value: 0x7f0800a6
 			public const int info = 2131230886;
 			
@@ -3009,8 +3015,8 @@ namespace ExtensionListView.Droid
 			// aapt resource value: 0x7f080046
 			public const int list_item = 2131230790;
 			
-			// aapt resource value: 0x7f0800b4
-			public const int masked = 2131230900;
+			// aapt resource value: 0x7f0800b6
+			public const int masked = 2131230902;
 			
 			// aapt resource value: 0x7f08009f
 			public const int media_actions = 2131230879;
@@ -3213,8 +3219,8 @@ namespace ExtensionListView.Droid
 			// aapt resource value: 0x7f080015
 			public const int showTitle = 2131230741;
 			
-			// aapt resource value: 0x7f0800b1
-			public const int sliding_tabs = 2131230897;
+			// aapt resource value: 0x7f0800b3
+			public const int sliding_tabs = 2131230899;
 			
 			// aapt resource value: 0x7f080071
 			public const int smallLabel = 2131230833;
@@ -3291,8 +3297,8 @@ namespace ExtensionListView.Droid
 			// aapt resource value: 0x7f080055
 			public const int title_template = 2131230805;
 			
-			// aapt resource value: 0x7f0800b2
-			public const int toolbar = 2131230898;
+			// aapt resource value: 0x7f0800b4
+			public const int toolbar = 2131230900;
 			
 			// aapt resource value: 0x7f080027
 			public const int top = 2131230759;
@@ -3312,8 +3318,8 @@ namespace ExtensionListView.Droid
 			// aapt resource value: 0x7f08000c
 			public const int view_offset_helper = 2131230732;
 			
-			// aapt resource value: 0x7f0800b3
-			public const int visible = 2131230899;
+			// aapt resource value: 0x7f0800b5
+			public const int visible = 2131230901;
 			
 			// aapt resource value: 0x7f080091
 			public const int volume_item_container = 2131230865;
@@ -3604,13 +3610,16 @@ namespace ExtensionListView.Droid
 			public const int simplerow = 2130903105;
 			
 			// aapt resource value: 0x7f030042
-			public const int support_simple_spinner_dropdown_item = 2130903106;
+			public const int SongCell = 2130903106;
 			
 			// aapt resource value: 0x7f030043
-			public const int Tabbar = 2130903107;
+			public const int support_simple_spinner_dropdown_item = 2130903107;
 			
 			// aapt resource value: 0x7f030044
-			public const int Toolbar = 2130903108;
+			public const int Tabbar = 2130903108;
+			
+			// aapt resource value: 0x7f030045
+			public const int Toolbar = 2130903109;
 			
 			static Layout()
 			{

@@ -7,7 +7,7 @@ using Android.Widget;
 */
 namespace Wahid.SwipemenuListview
 {
-    public abstract class BaseSwipListAdapter : BaseAdapter
+    public abstract class BaseSwipeAdapter : BaseAdapter
     {
         public bool GetSwipEnableByPosition(int position)
         {

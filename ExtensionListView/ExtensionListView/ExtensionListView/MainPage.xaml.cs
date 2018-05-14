@@ -12,8 +12,6 @@ namespace ExtensionListView
         public MainPage()
         {
             InitializeComponent();
-
-            listView.ItemsSource = Enumerable.Range(0, 1000);
         }
     }
 }

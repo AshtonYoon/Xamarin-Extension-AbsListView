@@ -87,9 +87,9 @@ namespace Wahid.SwipemenuListview
                 View view = mAdapter.GetView(position, layout.ContentView,
                         parent);
             }
-            if (mAdapter is BaseSwipListAdapter)
+            if (mAdapter is BaseSwipeAdapter)
             {
-                bool swipEnable = (((BaseSwipListAdapter)mAdapter).GetSwipEnableByPosition(position));
+                bool swipEnable = (((BaseSwipeAdapter)mAdapter).GetSwipEnableByPosition(position));
                 layout.SwipEnable = swipEnable;
             }
             return layout;

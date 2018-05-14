@@ -116,9 +116,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExtensionListViewRenderer.cs" />
+    <Compile Include="Item.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SongCellAdapter.cs" />
     <Compile Include="SwipeMenuListView\BaseSwipListAdapter.cs" />
     <Compile Include="SwipeMenuListView\Enums.cs" />
     <Compile Include="SwipeMenuListView\SwipeMenu.cs" />
@@ -133,6 +135,9 @@
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\layout\SongCell.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon.png" />

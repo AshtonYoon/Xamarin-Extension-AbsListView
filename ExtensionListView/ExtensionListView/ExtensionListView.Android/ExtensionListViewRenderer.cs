@@ -10,6 +10,7 @@ using Xamarin.Forms;
 
 using AColor = Android.Graphics.Color;
 using Android.Content;
+using System.Linq;
 
 [assembly: Xamarin.Forms.ExportRenderer(typeof(ExtensionListView.SwipeMenuListView), typeof(ExtensionListViewRenderer))]
 namespace ExtensionListView.Droid
@@ -27,59 +28,18 @@ namespace ExtensionListView.Droid
 
             listView = new A.SwipeMenuListView(Context);
 
-            string[] values = new string[]
+            var values = new List<Item>();
+            foreach(var element in Enumerable.Range(0, 1000))
             {
-                "Android List View",
-                "Adapter implementation",
-                "Simple List View In Android",
-                "Create List View Android",
-                "Android Example",
-                "List View Source Code",
-                "List View Array Adapter",
-                "Android Example List View",
-                "Android List View",
-                "Adapter implementation",
-                "Simple List View In Android",
-                "Create List View Android",
-                "Android Example",
-                "List View Source Code",
-                "List View Array Adapter",
-                "Android Example List View",
-                "Android List View",
-                "Adapter implementation",
-                "Simple List View In Android",
-                "Create List View Android",
-                "Android Example",
-                "List View Source Code",
-                "List View Array Adapter",
-                "Android Example List View",
-                "Android List View",
-                "Adapter implementation",
-                "Simple List View In Android",
-                "Create List View Android",
-                "Android Example",
-                "List View Source Code",
-                "List View Array Adapter",
-                "Android Example List View",
-                "Android List View",
-                "Adapter implementation",
-                "Simple List View In Android",
-                "Create List View Android",
-                "Android Example",
-                "List View Source Code",
-                "List View Array Adapter",
-                "Android Example List View",
-                "Android List View",
-                "Adapter implementation",
-                "Simple List View In Android",
-                "Create List View Android",
-                "Android Example",
-                "List View Source Code",
-                "List View Array Adapter",
-                "Android Example List View"
-            };
+                values.Add(new Item
+                {
+                    Name = "Xamarin 2.2.0",
+                    Detail = "Microsoft",
+                    Icon = "icon.png"
+                });
+            }
 
-            listView.Adapter = new ArrayAdapter<string>(Context, Resource.Layout.simplerow, values);
+            listView.Adapter = new SongCellAdapter(Context, Resource.Layout.SongCell, values);
 
             listView.SetMenuItems(menu =>
             {
@@ -96,6 +56,7 @@ namespace ExtensionListView.Droid
             });
 
             listView.MenuItemClickListener = new OnMenuItemClickListener();
+            listView.FastScrollEnabled = true;
 
             SetNativeControl(listView);
         }
@@ -107,7 +68,7 @@ namespace ExtensionListView.Droid
                 switch (index)
                 {
                     case 0:
-                        App.Current.MainPage.DisplayAlert("Title", "Delete button clicked", "OK");
+                        Application.Current.MainPage.DisplayAlert("Title", "Delete button clicked", "OK");
                         break;
                     case 1: 
                         break;
