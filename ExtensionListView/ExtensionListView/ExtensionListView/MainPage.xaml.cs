@@ -13,21 +13,7 @@ namespace ExtensionListView
         {
             InitializeComponent();
 
-            Task.Run(() =>
-            {
-                var source = Enumerable.Range(0, 1000).Select(x => x.ToString()).ToArray();
-
-                var templatedSource = new List<IGrouping<string, string>>(
-                    source.OrderBy(x => x).GroupBy(x => x[0].ToString().ToUpper()));
-
-                return templatedSource;
-            }).ContinueWith(task =>
-            {
-                Device.BeginInvokeOnMainThread(() =>
-                {
-                    listView.ItemsSource = task.Result;
-                });
-            });
+            listView.ItemsSource = Enumerable.Range(0, 1000);
         }
     }
 }

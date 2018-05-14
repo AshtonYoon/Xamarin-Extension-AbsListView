@@ -5,31 +5,15 @@
 			 xmlns:local="clr-namespace:ExtensionListView"
 			 x:Class="ExtensionListView.MainPage">
 	<ContentPage.Content>
-		<ListView x:Name="listView"
-				  IsGroupingEnabled="True"
-				  GroupDisplayBinding="{Binding Key}"
-				  GroupShortNameBinding="{Binding Key}"
-				  CachingStrategy="RecycleElement"
-				  android:ListView.IsFastScrollEnabled="True">
-			<ListView.ItemTemplate>
-				<DataTemplate>
-					<ViewCell>
-						<Grid x:Name="container"
-							  HeightRequest="40">
-							<Label x:Name="textLabel"
-								   Text="{Binding .}"
-								   FontSize="15" />
-							<Label x:Name="durationLabel"
-								   Text="3:31"
-								   FontSize="Small"
-								   HorizontalTextAlignment="End"
-								   VerticalOptions="End"
-								   HorizontalOptions="End"
-								   TranslationX="-40" />
-						</Grid>
-					</ViewCell>
-				</DataTemplate>
-			</ListView.ItemTemplate>
-		</ListView>
+		<local:SwipeMenuListView x:Name="listView" 
+								 HorizontalOptions="Fill"
+								 VerticalOptions="Fill">
+			<local:SwipeMenuListView.Header>
+				<StackLayout>
+					<Label Text="Header"
+						   TextColor="Black"/>
+				</StackLayout>
+			</local:SwipeMenuListView.Header>
+		</local:SwipeMenuListView>
 	</ContentPage.Content>
 </ContentPage>

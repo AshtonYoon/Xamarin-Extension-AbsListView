@@ -3009,8 +3009,8 @@ namespace ExtensionListView.Droid
 			// aapt resource value: 0x7f080046
 			public const int list_item = 2131230790;
 			
-			// aapt resource value: 0x7f0800b3
-			public const int masked = 2131230899;
+			// aapt resource value: 0x7f0800b4
+			public const int masked = 2131230900;
 			
 			// aapt resource value: 0x7f08009f
 			public const int media_actions = 2131230879;
@@ -3147,6 +3147,9 @@ namespace ExtensionListView.Droid
 			// aapt resource value: 0x7f0800a3
 			public const int right_side = 2131230883;
 			
+			// aapt resource value: 0x7f0800b0
+			public const int rowTextView = 2131230896;
+			
 			// aapt resource value: 0x7f080018
 			public const int screen = 2131230744;
 			
@@ -3210,8 +3213,8 @@ namespace ExtensionListView.Droid
 			// aapt resource value: 0x7f080015
 			public const int showTitle = 2131230741;
 			
-			// aapt resource value: 0x7f0800b0
-			public const int sliding_tabs = 2131230896;
+			// aapt resource value: 0x7f0800b1
+			public const int sliding_tabs = 2131230897;
 			
 			// aapt resource value: 0x7f080071
 			public const int smallLabel = 2131230833;
@@ -3288,8 +3291,8 @@ namespace ExtensionListView.Droid
 			// aapt resource value: 0x7f080055
 			public const int title_template = 2131230805;
 			
-			// aapt resource value: 0x7f0800b1
-			public const int toolbar = 2131230897;
+			// aapt resource value: 0x7f0800b2
+			public const int toolbar = 2131230898;
 			
 			// aapt resource value: 0x7f080027
 			public const int top = 2131230759;
@@ -3309,8 +3312,8 @@ namespace ExtensionListView.Droid
 			// aapt resource value: 0x7f08000c
 			public const int view_offset_helper = 2131230732;
 			
-			// aapt resource value: 0x7f0800b2
-			public const int visible = 2131230898;
+			// aapt resource value: 0x7f0800b3
+			public const int visible = 2131230899;
 			
 			// aapt resource value: 0x7f080091
 			public const int volume_item_container = 2131230865;
@@ -3598,13 +3601,16 @@ namespace ExtensionListView.Droid
 			public const int select_dialog_singlechoice_material = 2130903104;
 			
 			// aapt resource value: 0x7f030041
-			public const int support_simple_spinner_dropdown_item = 2130903105;
+			public const int simplerow = 2130903105;
 			
 			// aapt resource value: 0x7f030042
-			public const int Tabbar = 2130903106;
+			public const int support_simple_spinner_dropdown_item = 2130903106;
 			
 			// aapt resource value: 0x7f030043
-			public const int Toolbar = 2130903107;
+			public const int Tabbar = 2130903107;
+			
+			// aapt resource value: 0x7f030044
+			public const int Toolbar = 2130903108;
 			
 			static Layout()
 			{
