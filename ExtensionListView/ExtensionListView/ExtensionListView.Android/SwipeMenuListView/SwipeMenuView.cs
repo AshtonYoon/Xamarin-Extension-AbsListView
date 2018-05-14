@@ -96,6 +96,7 @@ namespace Wahid.SwipemenuListview
 
             return textView;
         }       
+
         public void OnClick(View v)
         {
             if (SwipeItemClickListener != null && SwipeMenuLayout.IsOpen())

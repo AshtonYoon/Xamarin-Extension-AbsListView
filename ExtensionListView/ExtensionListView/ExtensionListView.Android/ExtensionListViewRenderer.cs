@@ -9,6 +9,7 @@ using Android.Widget;
 using Xamarin.Forms;
 
 using AColor = Android.Graphics.Color;
+using Android.Content;
 
 [assembly: Xamarin.Forms.ExportRenderer(typeof(ExtensionListView.SwipeMenuListView), typeof(ExtensionListViewRenderer))]
 namespace ExtensionListView.Droid
@@ -16,6 +17,7 @@ namespace ExtensionListView.Droid
     public class ExtensionListViewRenderer : ListViewRenderer
     {
         private A.SwipeMenuListView listView;
+        public Context CurrentContext => Context;
 
         protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.ListView> e)
         {
@@ -93,7 +95,25 @@ namespace ExtensionListView.Droid
                 };
             });
 
+            listView.MenuItemClickListener = new OnMenuItemClickListener();
+
             SetNativeControl(listView);
+        }
+        
+        public class OnMenuItemClickListener : A.IOnMenuItemClickListener
+        {
+            public bool OnMenuItemClick(int position, A.SwipeMenu menu, int index)
+            {
+                switch (index)
+                {
+                    case 0:
+                        App.Current.MainPage.DisplayAlert("Title", "Delete button clicked", "OK");
+                        break;
+                    case 1: 
+                        break;
+                }
+                return false;
+            }
         }
     }
 }
