@@ -329,22 +329,4 @@ namespace ExtensionListView.Droid.SwipeMenuListView
             }
         }
     }
-
-    public interface IOnMenuItemClickListener
-    {
-        bool OnMenuItemClick(int position, SwipeMenu menu, int index);
-    }
-
-    public interface IOnSwipeListener
-    {
-        void OnSwipeStart(int position);
-
-        void OnSwipeEnd(int position);
-    }
-
-    public interface IOnMenuStateChangeListener
-    {
-        void OnMenuOpen(int position);
-
-        void OnMenuClose(int position);
-    }}
+}

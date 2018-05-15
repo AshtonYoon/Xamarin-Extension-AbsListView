@@ -123,6 +123,9 @@
     <Compile Include="SongCellAdapter.cs" />
     <Compile Include="SwipeMenuListView\BaseSwipListAdapter.cs" />
     <Compile Include="SwipeMenuListView\Enums.cs" />
+    <Compile Include="SwipeMenuListView\IOnMenuItemClickListener.cs" />
+    <Compile Include="SwipeMenuListView\IOnMenuStateChangeListener.cs" />
+    <Compile Include="SwipeMenuListView\IOnSwipeListener.cs" />
     <Compile Include="SwipeMenuListView\SwipeMenu.cs" />
     <Compile Include="SwipeMenuListView\SwipeMenuAdapter.cs" />
     <Compile Include="SwipeMenuListView\SwipeMenuCreator.cs" />

@@ -1,22 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
+﻿using System.Collections.Generic;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Java.Lang;
-using Wahid.SwipemenuListview;
 using Xamarin.Forms;
 using System.Threading.Tasks;
 using Android.Graphics;
 using Xamarin.Forms.Platform.Android;
 using Android.Content.Res;
-using Android.Graphics.Drawables;
+using ExtensionListView.Droid.SwipeMenuListView;
 
 namespace ExtensionListView.Droid
 {

@@ -1,7 +1,7 @@
 ﻿using Xamarin.Forms.Platform.Android;
 using ExtensionListView.Droid;
 
-using A = Wahid.SwipemenuListview;
+using A = ExtensionListView.Droid.SwipeMenuListView;
 using System.Collections.Generic;
 using Android.Graphics.Drawables;
 using Android.Graphics;
