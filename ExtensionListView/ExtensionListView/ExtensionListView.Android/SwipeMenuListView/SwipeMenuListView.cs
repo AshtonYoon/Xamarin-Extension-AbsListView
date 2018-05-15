@@ -7,7 +7,7 @@ using Android.Widget;
 using System;
 using System.Collections.Generic;
 
-namespace Wahid.SwipemenuListview
+namespace ExtensionListView.Droid.SwipeMenuListView
 {
     public class SwipeMenuListView : ListView
     {
@@ -315,6 +315,7 @@ namespace Wahid.SwipemenuListview
                 }
             }
         }
+
         private class MenuCreatorGenerator : ISwipeMenuCreator
         {
             private Func<SwipeMenu, List<SwipeMenuItem>> itemsFunc;

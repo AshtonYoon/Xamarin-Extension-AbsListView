@@ -1,12 +1,10 @@
 using Android.Content;
 using Android.Database;
-using Android.Graphics;
-using Android.Graphics.Drawables;
 using Android.Views;
 using Android.Widget;
 using Java.Lang;
 
-namespace Wahid.SwipemenuListview
+namespace ExtensionListView.Droid.SwipeMenuListView
 {
     public class SwipeMenuAdapter : Java.Lang.Object, IWrapperListAdapter, SwipeMenuView.IOnSwipeItemClickListener
     {

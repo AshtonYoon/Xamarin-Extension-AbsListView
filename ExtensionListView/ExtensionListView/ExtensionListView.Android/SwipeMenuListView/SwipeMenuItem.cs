@@ -1,7 +1,7 @@
 using Android.Content;
 using Android.Graphics.Drawables;
 
-namespace Wahid.SwipemenuListview
+namespace ExtensionListView.Droid.SwipeMenuListView
 {
     public class SwipeMenuItem
     {

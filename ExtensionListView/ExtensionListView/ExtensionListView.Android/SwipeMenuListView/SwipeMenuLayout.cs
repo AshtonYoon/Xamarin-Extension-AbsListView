@@ -9,7 +9,7 @@ using Android.Widget;
 using System;
 using static Android.Views.GestureDetector;
 
-namespace Wahid.SwipemenuListview
+namespace ExtensionListView.Droid.SwipeMenuListView
 {
     public class SwipeMenuLayout : FrameLayout
     {

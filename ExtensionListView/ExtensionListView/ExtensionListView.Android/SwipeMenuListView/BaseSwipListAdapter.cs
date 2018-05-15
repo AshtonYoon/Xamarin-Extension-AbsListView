@@ -1,11 +1,7 @@
 
 using Android.Widget;
-/**
-* Created by Abner on 15/11/20.
-* Email nimengbo@gmail.com
-* github https://github.com/nimengbo
-*/
-namespace Wahid.SwipemenuListview
+
+namespace ExtensionListView.Droid.SwipeMenuListView
 {
     public abstract class BaseSwipeAdapter : BaseAdapter
     {

@@ -6,11 +6,10 @@ using Android.Views;
 using Android.Graphics.Drawables;
 using Android.Graphics;
 
-namespace Wahid.SwipemenuListview
+namespace ExtensionListView.Droid.SwipeMenuListView
 {
     public class SwipeMenuView : LinearLayout, IOnClickListener
     {
-
         private SwipeMenuListView mListView;
         public SwipeMenuLayout SwipeMenuLayout { internal get; set; }
         private SwipeMenu mMenu;

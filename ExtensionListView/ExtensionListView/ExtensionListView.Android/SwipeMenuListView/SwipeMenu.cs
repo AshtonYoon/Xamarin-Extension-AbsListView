@@ -1,7 +1,7 @@
 using Android.Content;
 using System.Collections.Generic;
 
-namespace Wahid.SwipemenuListview
+namespace ExtensionListView.Droid.SwipeMenuListView
 {
     public class SwipeMenu
     {

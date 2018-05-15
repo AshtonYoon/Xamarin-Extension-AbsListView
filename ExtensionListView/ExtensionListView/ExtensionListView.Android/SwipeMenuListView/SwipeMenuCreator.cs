@@ -1,8 +1,7 @@
-namespace Wahid.SwipemenuListview
+namespace ExtensionListView.Droid.SwipeMenuListView
 {
     public interface ISwipeMenuCreator
     {
-
         void Create(SwipeMenu menu);
     }
 }
