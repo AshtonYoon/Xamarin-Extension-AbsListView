@@ -30,8 +30,8 @@ namespace SQLiteTester
                 songViewHolder.Title.Text = song.Title;
                 songViewHolder.Detail.Text = song.ArtistName;
                 songViewHolder.Duration.Text = song.Duration.ToString();
-
-                //songViewHolder.Cover.SetImageBitmap(ReadImageWithSampling(songs[position].FrontCover));
+                
+                //songViewHolder.Cover.SetImageBitmap(ReadImageWithSampling((byte[])album.FrontCover));
             }
 
             if (position % 2 == 1)
