@@ -25,9 +25,11 @@ namespace SQLiteTester
         {
             if(holder is SongViewHolder songViewHolder)
             {
-                songViewHolder.Title.Text = songs[position].Title;
-                songViewHolder.Detail.Text = songs[position].ArtistName;
-                songViewHolder.Duration.Text = songs[position].Duration.ToString();
+                ISongFromDB song = songs[position];
+
+                songViewHolder.Title.Text = song.Title;
+                songViewHolder.Detail.Text = song.ArtistName;
+                songViewHolder.Duration.Text = song.Duration.ToString();
 
                 //songViewHolder.Cover.SetImageBitmap(ReadImageWithSampling(songs[position].FrontCover));
             }

@@ -84,7 +84,7 @@ namespace SQLiteTester
 
         public IReadOnlyList<ISongFromDB> GetSongs()
         {
-            return mDbHelper.SongManager.GetRange(0, 150);
+            return mDbHelper.SongManager;
         }
     }
 

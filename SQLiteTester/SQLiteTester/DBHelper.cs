@@ -8,6 +8,7 @@ using Java.IO;
 using Android.Util;
 using Aurender.Core.Data.DB;
 using Aurender.Core.Data.DB.Managers;
+using Aurender.Core.Contents;
 
 namespace SQLiteTester
 {
@@ -84,6 +85,10 @@ namespace SQLiteTester
             aurenderDB.OpenAsync().Wait();
 
             SongManager = new SongManager(aurenderDB);
+
+            DataFilter filter = new DataFilter();
+            this.SongManager.FilterWith(filter);
+
             var count = SongManager.TotalItemCount;
 
             //mDataBase = SQLiteDatabase.OpenDatabase(mPath, null, DatabaseOpenFlags.CreateIfNecessary);

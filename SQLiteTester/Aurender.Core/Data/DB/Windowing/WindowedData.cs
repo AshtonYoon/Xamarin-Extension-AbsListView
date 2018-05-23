@@ -14,7 +14,7 @@ namespace Aurender.Core.Data.DB.Windowing
         bool IARLog.IsARLogEnabled { get { return LogAll; } set { LogAll = value; } }
         #endregion
 
-        const int S_Window_Size = 1000;
+        const int S_Window_Size = 50;
 
         internal List<String> sections { get; private set; }
         internal List<Int32> itemCountForSection { get; private set; }
