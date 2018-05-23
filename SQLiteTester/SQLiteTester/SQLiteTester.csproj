@@ -230,6 +230,10 @@
       <Project>{73732e1a-9c6f-4b9a-bb40-cd18ffb4906c}</Project>
       <Name>Aurender.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SQLite.Net-PCL\nuget\SQLite-net-std\SQLite-net-std.csproj">
+      <Project>{1D7F0DBB-B0D7-4C75-9D7F-8F1D5F62F38B}</Project>
+      <Name>SQLite-net-std</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

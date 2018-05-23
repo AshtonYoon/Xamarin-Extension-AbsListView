@@ -6,6 +6,8 @@ using System;
 using Android.Arch.Lifecycle;
 using Java.IO;
 using Android.Util;
+using Aurender.Core.Data.DB;
+using Aurender.Core.Data.DB.Managers;
 
 namespace SQLiteTester
 {
@@ -16,7 +18,10 @@ namespace SQLiteTester
         private static String DB_PATH = "";
         private static String DB_NAME = "aurender.db"; // 데이터베이스 이름 
         private SQLiteDatabase mDataBase;
+        private AurenderDB aurenderDB;
         private readonly Context mContext;
+
+        public SongManager SongManager { get; set; }
 
         public DataBaseHelper(Context context) : base(context, DB_NAME, null, 1)
         {
@@ -75,7 +80,13 @@ namespace SQLiteTester
         {
             String mPath = DB_PATH + DB_NAME;
             //Log.v("mPath", mPath);
-            mDataBase = SQLiteDatabase.OpenDatabase(mPath, null, DatabaseOpenFlags.CreateIfNecessary);
+            aurenderDB = new AurenderDB(mPath, DB_PATH, null, string.Empty, string.Empty);
+            aurenderDB.OpenAsync().Wait();
+
+            SongManager = new SongManager(aurenderDB);
+            var count = SongManager.TotalItemCount;
+
+            //mDataBase = SQLiteDatabase.OpenDatabase(mPath, null, DatabaseOpenFlags.CreateIfNecessary);
             //mDataBase = SQLiteDatabase.openDatabase(mPath, null, SQLiteDatabase.NO_LOCALIZED_COLLATORS);
             return mDataBase != null;
         }

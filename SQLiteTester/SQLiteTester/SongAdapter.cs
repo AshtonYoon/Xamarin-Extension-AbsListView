@@ -2,6 +2,7 @@
 using Android.Graphics;
 using Android.Support.V7.Widget;
 using Android.Views;
+using Aurender.Core;
 using System;
 using System.Collections.Generic;
 
@@ -10,9 +11,9 @@ namespace SQLiteTester
     internal class SongAdapter : RecyclerView.Adapter
     {
         private Context context;
-        public IList<Song> songs;
+        public IReadOnlyList<ISongFromDB> songs;
         
-        public SongAdapter(Context context, IList<Song> songs)
+        public SongAdapter(Context context, IReadOnlyList<ISongFromDB> songs)
         {
             this.context = context;
             this.songs = songs;
@@ -25,10 +26,10 @@ namespace SQLiteTester
             if(holder is SongViewHolder songViewHolder)
             {
                 songViewHolder.Title.Text = songs[position].Title;
-                songViewHolder.Detail.Text = songs[position].Detail;
-                songViewHolder.Duration.Text = songs[position].Duration;
+                songViewHolder.Detail.Text = songs[position].ArtistName;
+                songViewHolder.Duration.Text = songs[position].Duration.ToString();
 
-                songViewHolder.Cover.SetImageBitmap(ReadImageWithSampling(songs[position].Cover));
+                //songViewHolder.Cover.SetImageBitmap(ReadImageWithSampling(songs[position].FrontCover));
             }
 
             if (position % 2 == 1)

@@ -6,6 +6,7 @@ using Android.Support.V7.Widget;
 using System.Collections.Generic;
 using System;
 using Android.Database;
+using Aurender.Core;
 
 namespace SQLiteTester
 {
@@ -19,15 +20,12 @@ namespace SQLiteTester
         //adapter
         private SongAdapter adapter;
         //dataset
-        private IList<Song> songs;
+        private IReadOnlyList<ISongFromDB> songs;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
-            songs = new List<Song>();
-            adapter = new SongAdapter(this, songs);
-
+            
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
             
@@ -43,12 +41,22 @@ namespace SQLiteTester
 
         private void Retrieve()
         {
-            songs.Clear();
+            songs = null;
 
-            DBAdapter mDbHelper = new DBAdapter(ApplicationContext);
-            mDbHelper.createDatabase();
-            mDbHelper.open();
+            DBAdapter dbAdapter = new DBAdapter(ApplicationContext);
+            dbAdapter.createDatabase();
+            dbAdapter.open();
 
+            songs = dbAdapter.GetSongs();
+            adapter = new SongAdapter(this, songs);
+
+            recyclerView.SetAdapter(adapter);
+            //LoadByAndroidSQLite(mDbHelper);
+        }
+
+        [Obsolete("please use sqlite net std instead")]
+        private void LoadByAndroidSQLite(DBAdapter mDbHelper)
+        {
             ICursor testdata = mDbHelper.GetTestData();
 
             if (testdata == null) return;
@@ -70,7 +78,7 @@ namespace SQLiteTester
                 };
 
                 //ADD TO ARRAYLIS
-                songs.Add(song);
+                //songs.Add(song);
             }
 
             //CHECK IF ARRAYLIST ISNT EMPTY
@@ -78,7 +86,7 @@ namespace SQLiteTester
             {
                 recyclerView.SetAdapter(adapter);
             }
-            
+
             mDbHelper.Close();
         }
     }
