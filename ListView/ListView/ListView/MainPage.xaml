@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ListView"
+			 xmlns:androidSpecific="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             x:Class="ListView.MainPage"
+			 xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
+
+	<Grid>
+		<ListView x:Name="listView"
+				  androidSpecific:ListView.IsFastScrollEnabled="true"
+				  CachingStrategy="RecycleElement">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<Grid HeightRequest="40"
+							  HorizontalOptions="Fill">
+							<ffimage:CachedImage Source="sample_cover_small.png"
+												 WidthRequest="30"
+												 HeightRequest="30"
+												 TranslationX="5"
+												 VerticalOptions="Center"
+												 HorizontalOptions="Start"/>
+							<Label TranslationX="40"
+								   Text="{Binding Title}"/>
+							<Label TranslationX="40"
+								   TranslationY="20"
+								   Text="{Binding ArtistName}"/>
+						</Grid>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</Grid>
+
+</ContentPage>
